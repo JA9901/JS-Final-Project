@@ -6,42 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Search</title>
 </head>
-    <div id="app">
-        <div class="flex flex-col" style="display: flex; flex: 1 1 0%;">
-            <div class="navbar flex flex-col">
-                <div class="flex content-wrapper justify-between align-center" style="flex-direction: row; z-index: 1005;">
-                <div class="logo"></div>
-                <div class="link flex align-center justify-between"></div>
-                <div class="phone-nav"></div>
+    <div data-v-1 id="app">
+        <div data-v-5 data-v-1 class="flex flex-col" style="display: flex; flex: 1 1 0%;">
+            <div data-v-6 data-v-5 class="navbar flex flex-col">
+                <div data-v-6 class="flex content-wrapper justify-between align-center" style="flex-direction: row; z-index: 1005;">
+                    <div data-v-6 class="logo">
+                        <img data-v-6 src="" alt="cinema logo" class="logo">
+                    </div>
+                    <div data-v-6 class="link flex align-center justify-between">
+                        <a data-v-6 href="/" class="link router-link-active">Home</a>
+                        <a data-v-6 href="/findamovie" class="link router-link-exact-active router-link-active">Find your car</a>
+                        <a data-v-6 class="btn-contact">Contact</a>
+                    </div>
+                    <div class="phone-nav"></div>
                 </div>
-                <div class="content-wrapper flex-col align-center" style="margin-top: 40px;">
-                <h1>Browse our movies</h1>
-                <div class="input-wrap">
-                    <input type="text" placeholder="Enter movies">
-                    <div class="search-wrapper flex justify-center align-center">
-                        <svg data-v-390ceb07="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-search fa-w-16"><path data-v-390ceb07="" fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" class=""></path></svg>
+                <div data-v-6 class="content-wrapper flex-col align-center" style="margin-top: 40px;">
+                    <h1 data-v-6>Browse our movies</h1>
+                    <div data-v-6 class="input-wrap">
+                        <input data-v-6 type="text" placeholder="Enter movies">
+                        <div data-v-6 class="search-wrapper flex justify-center align-center">
+                            <svg data-v-6 aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-search fa-w-16"><path data-v-390ceb07="" fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" class=""></path></svg>
+                        </div>
                     </div>
                 </div>
-                </div>
-                <div class="overlay"></div>
+                <div data-v-6 class="overlay"></div>
             </div>
-            <section id="search">
-                <div class="md-progress-bar md-indeterminate md-theme-default" style="position: absolute; top: 0px; left: 0px; right: 0px;">
-                <div class="md-progress-bar-track"></div>
-                <div class="md-progress-bar-fill"></div>
-                <div class="md-progress-bar-buffer"></div>
+            <section data-v-5 id="search">
+                <div data-v-5 class="md-progress-bar md-indeterminate md-theme-default" style="position: absolute; top: 0px; left: 0px; right: 0px;">
+                    <div class="md-progress-bar-track"></div>
+                    <div class="md-progress-bar-fill"></div>
+                    <div class="md-progress-bar-buffer"></div>
                 </div>
-                <div id="filter" class="content-wrapper justify-between">
-                    <h1 class="search-info">
-                        <span data-v-66aecfa2="" class="black-txt">Search results:</span>
+                <div data-v-7 data-v-5 id="filter" class="content-wrapper justify-between">
+                    <h1 data-v-7 class="search-info">
+                        <span data-v-7 class="black-txt">Search results:</span>
                     </h1>
-                    <div class="price-filter flex flex-col">
-                        <h2><span data-v-66aecfa2="" class="black-txt" style="margin-right: 8px;">Year:</span>
-                        1966-2022
+                    <div data-v-7 class="price-filter flex flex-col">
+                        <h2>
+                            <span data-v-7 class="black-txt" style="margin-right: 8px;">Year:</span>
+                            1966-2022
                         </h2>
-                        <div class="slider-wrapper">
-                            <div data-v-66aecfa2="" role="slider" aria-valuemin="0" aria-valuemax="100000" aria-orientation="horizontal" class="el-slider" aria-valuetext="0-100000" aria-label="slider between 0 and 100000">
-                                <!----><div class="el-slider__runway">
+                        <div data-v-7 class="slider-wrapper">
+                            <div data-v-7="" role="slider" aria-valuemin="0" aria-valuemax="100000" aria-orientation="horizontal" class="el-slider" aria-valuetext="0-100000" aria-label="slider between 0 and 100000">
+                                <!---->
+                                <div class="el-slider__runway">
                                     <div class="el-slider__bar" style="width: 100%; left: 0%;"></div>
                                     <div tabindex="0" class="el-slider__button-wrapper" style="left: 0%;">
                                         <div class="el-tooltip el-slider__button" aria-describedby="el-tooltip-4950" tabindex="0"></div>
@@ -62,10 +70,12 @@
                         </div>
                     </div>
                 </div>
-                <div id="cars">
-                    <div class="content-wrapper">
-                        <div class="loading-state flex justify-center">
-                            <svg data-v-cf78a876="" data-v-ca62299c="" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="spinner" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-spinner fa-w-16" style="font-size: 30px; color: rgb(96, 48, 177);"><path data-v-cf78a876="" fill="currentColor" d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z" class=""></path></svg>
+                <div data-v-8 data-v-5 id="cars">
+                    <div data-v-8 class="content-wrapper">
+                        <div data-v-8 class="loading-state flex justify-center">
+                            <svg data-v-4 data-v-8 aria-hidden="true" focusable="false" data-prefix="fas" data-icon="spinner" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-spinner fa-w-16" style="font-size: 30px; color: rgb(96, 48, 177);">
+                                <path data-v-4 fill="currentColor" d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z" class=""></path>
+                            </svg>
                         </div>
                     </div>
                 </div>
