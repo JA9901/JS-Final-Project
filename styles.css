@@ -5,6 +5,12 @@
     box-sizing: border-box;
 }
 
+#app[data-v-1] {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 body {
     min-height: 100%;
     margin: 0;
@@ -34,20 +40,13 @@ body, html{
     background-color: #fff;
 }
 
-.flex {
-    display: flex!important;
-}
-
-.content-wrapper {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1200px;
+.navbar[data-v-6] {
+    height: 326px;
+    padding: 40px 15px;
+    background-color: grey;
     display: flex;
-    flex-wrap: wrap;
-}
-
-.flex-col {
-    flex-direction: column!important;
+    align-items: center;
+    position: relative;
 }
 
 .navbar {
@@ -59,9 +58,36 @@ body, html{
     font-weight: 600;
 }
 
+.content-wrapper[data-v-6] {
+    align-items: center;
+    flex-direction: column;
+    margin-top: -20px;
+    z-index: 2;
+}
+
+.content-wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex {
+    display: flex!important;
+}
+
+.flex-col {
+    flex-direction: column!important;
+}
+
 .navbar .logo {
     height: 40px;
     width: 150px;
+}
+
+.logo[data-v-6] {
+    transition: all .15s ease;
 }
 
 .justify-between {
@@ -106,6 +132,30 @@ a:not(.md-button) {
     position: relative;
 }
 
+.navbar .link:after {
+    background-color: #0a1f44;
+    transition: all .25s cubic-bezier(.694,.048,.335,1);
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    right: 0;
+    width: 0;
+    height: 3px;
+}
+
+.navbar .link:hover:after {
+    left: 0;
+    width: 100%;
+}
+
+.navbar .router-link-exact-active:after {
+    background-color: #6030b1!important;
+}
+
+.link[data-v-6] {
+    filter: brightness(0) invert(1);
+}
+
 a.btn-contact {
     display: flex;
     cursor: pointer;
@@ -113,7 +163,6 @@ a.btn-contact {
     min-height: 48px;
     padding: 12px 40px;
     align-items: center;
-    border: 2px #5d3eff;
     border-radius: 50px;
     background-color: #6030b1;
     color: #fff!important;
@@ -124,21 +173,8 @@ a.btn-contact {
     transition: all .35s ease;
 }
 
-.navbar .link:after {
-    background-color: #0a1f44;
-    transition: all .25s cubic-bezier(.694,.048,.335,1);
-    content: "";
-    position: absolute;
-    bottom: -3px;
-    right: 0;
-    left: auto;
-    width: 0;
-    height: 3px;
-    z-index: 2;
-}
-
-.navbar .router-link-exact-active:after {
-    background-color: #6030b1!important;
+a.btn-contact:hover{
+    background-color: #5d3eff;
 }
 
 .md-theme-default a:not(.md-button) {
@@ -158,19 +194,17 @@ a.link[data-v-9] {
     color: var(--md-theme-default-primary-on-background,#6030b1);
 }
 
+.links a.btn-contact[data-v-6] {
+    background-color: rgb(255, 255, 255);
+    color: rgb(96, 48, 177) !important;
+}
+
 #phone-nav {
     display: none;
 }
 
 #phone-nav[data-v-9] {
     position: relative;
-}
-
-
-#app[data-v-1] {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 
 .show-anim-in[data-v-9] {
@@ -310,10 +344,13 @@ input[data-v-2] {
     line-height: 40px;
     outline: none;
     padding: 0 15px;
-    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
     width: 100%;
     font-size: 24px;
     padding-left: 25px;
+}
+
+input:focus{
+    border: 2px solid #6030b1;
 }
 
 button[data-v-2] {
@@ -328,10 +365,13 @@ button[data-v-2] {
 button.not-loading[data-v-2] {
     border: #6030b1;
     background-color: #6030b1;
-    box-shadow: 7px 7px 14px rgb(134 93 204 / 30%);
     cursor: pointer;
 }
 
+button.not-loading:hover[data-v-2] {
+    background-color: #ff328f;
+    cursor: pointer;
+}
 button.loading[data-v-2] {
     background-color: #0a1f44;
     cursor: no-drop;
