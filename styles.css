@@ -502,9 +502,21 @@ audio:not(.md-image), canvas:not(.md-image), embed:not(.md-image), iframe:not(.m
 }
 
 @media screen and (max-width: 750px) {
+    .links[data-v-6] {
+        display: none !important;
+}
+}
+
+@media screen and (max-width: 750px) {
     #phone-nav{
         display: block;
     }
+}
+
+@media screen and (max-width: 750px) {
+    #phone-nav[data-v-390ceb07] {
+        display: block;
+}
 }
 
 @media screen and (max-width: 750px) {
