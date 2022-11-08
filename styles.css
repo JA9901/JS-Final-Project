@@ -565,6 +565,11 @@ button[data-v-2] {
     transition: all .25s ease;
 }
 
+button.loading[data-v-2] {
+    background-color: #0a1f44;
+    cursor: no-drop;
+}
+
 button.not-loading[data-v-2] {
     border: #6030b1;
     background-color: #6030b1;
@@ -574,10 +579,6 @@ button.not-loading[data-v-2] {
 button.not-loading:hover[data-v-2] {
     background-color: #ff328f;
     cursor: pointer;
-}
-button.loading[data-v-2] {
-    background-color: #0a1f44;
-    cursor: no-drop;
 }
 
 .svg-inline--fa {
@@ -595,6 +596,15 @@ button.loading[data-v-2] {
 .fa-spinner[data-v-4] {
     -webkit-animation: rotate-data-v-4 1s linear infinite;
     animation: rotate-data-v-4 1s linear infinite;
+}
+
+@keyframes rotate-data-v-4 {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 svg:not(:root).svg-inline--fa {
