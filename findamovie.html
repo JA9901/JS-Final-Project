@@ -49,7 +49,7 @@
                 <div data-v-6 class="content-wrapper flex-col align-center" style="margin-top: 40px;">
                     <h1 data-v-6>Browse our movies</h1>
                     <div data-v-6 class="input-wrap">
-                        <input data-v-6 type="text" placeholder="Enter movies">
+                        <input data-v-6 type="text" placeholder="Enter movies" id="movie-search-box" onkeyup="findMovies()">
                         <div data-v-6 class="search-wrapper flex justify-center align-center">
                             <svg data-v-6 aria-hidden="true" focusable="false" data-prefix="fas" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-search fa-w-16"><path data-v-390ceb07="" fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" class=""></path></svg>
                         </div>
@@ -98,6 +98,50 @@
                 </div>
                 <div data-v-8 data-v-5 id="cars">
                     <div data-v-8 class="content-wrapper">
+                        <div class = "search-list" id = "search-list">
+                            <!-- list here -->
+                            <!-- <div class = "search-list-item">
+                                <div class = "search-item-thumbnail">
+                                    <img src = "medium-cover.jpg">
+                                </div>
+                                <div class = "search-item-info">
+                                    <h3>Guardians of the Galaxy Vol. 2</h3>
+                                    <p>2017</p>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- end of search container -->
+        
+                <!-- result container -->
+                <div class = "container">
+                    <div class = "result-container">
+                        <div class = "result-grid" id = "result-grid">
+                            <!-- movie information here -->
+                            <!-- <div class = "movie-poster">
+                                <img src = "medium-cover.jpg" alt = "movie poster">
+                            </div>
+                            <div class = "movie-info">
+                                <h3 class = "movie-title">Guardians of the Galaxy Vol. 2</h3>
+                                <ul class = "movie-misc-info">
+                                    <li class = "year">Year: 2017</li>
+                                    <li class = "rated">Ratings: PG-13</li>
+                                    <li class = "released">Released: 05 May 2017</li>
+                                </ul>
+                                <p class = "genre"><b>Genre:</b> Action, Adventure, Comedy</p>
+                                <p class = "writer"><b>Writer:</b> James Gunn, Don Abnett, Andy Lanning</p>
+                                <p class = "actors"><b>Actors: </b>Chris Pratt, Zoe Saldana, Dave Bautista</p>
+                                <p class = "plot"><b>Plot:</b> The Guardians struggle to keep together as a team while dealing with their personal family issues, notably Star-Lord's ecounter with his father the ambitious celestial being Ego.</p>
+                                <p class = "language"><b>Language:</b> English</p>
+                                <p class = "awards"><b><i class = "fas fa-award"></i></b> Nominated for 1 Oscar</p>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- end of result container -->
+            </div>
+        
                         <div data-v-8 class="loading-state flex justify-center">
                             <svg data-v-4 data-v-8 aria-hidden="true" focusable="false" data-prefix="fas" data-icon="spinner" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="svg-inline--fa fa-spinner fa-w-16" style="font-size: 30px; color: rgb(96, 48, 177);">
                                 <path data-v-4 fill="currentColor" d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z" class=""></path>
@@ -108,7 +152,6 @@
             </section>
         </div>
     </div>
+    <script src="findamovie.js"></script>
 </body>
-<script src="findamovie.js"></script>
-
 </html>
